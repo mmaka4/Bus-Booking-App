@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.root.onlinebusbooking.MainActivity"
+    android:background="@color/white"
+    >
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="140dp"
+       android:layout_marginTop="10dp"
+
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:background="@color/milk"
+       android:id="@+id/choosetrip"
+       >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="5dp"
+           android:textSize="20sp"
+           android:text="Choose trip"
+           android:layout_marginTop="2dp"
+           android:id="@+id/head1"
+           android:fontFamily="@font/montserrat_light"
+           />
+
+       <ImageView
+           android:layout_width="34dp"
+           android:layout_height="34dp"
+           android:background="@drawable/location"
+           android:layout_marginTop="8dp"
+           android:layout_below="@id/head1"
+           android:layout_marginLeft="10dp"
+           android:id="@+id/img3"
+           />
+
+       <!--Spinner
+           android:layout_width="265dp"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="70dp"
+           android:layout_marginTop="10dp"
+           android:layout_below="@id/head1"
+           android:id="@+id/fromspin"
+           android:autofillHints="From"
+           android:fontFamily="@font/candara"
+
+           /-->
+
+       <com.isapanah.awesomespinner.AwesomeSpinner
+           android:id="@+id/fromspin"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="0dp"
+           android:layout_below="@id/head1"
+           android:layout_toEndOf="@id/img3"
+           android:layout_marginLeft="8dp"
+           app:spinnerDirection="ltr"
+           app:spinnerHint="from City"
+           />
+
+       <com.isapanah.awesomespinner.AwesomeSpinner
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="8dp"
+           android:layout_toEndOf="@id/img4"
+           android:layout_marginTop="0dp"
+           android:layout_below="@id/fromspin"
+           android:id="@+id/tospin"
+           app:spinnerHint="to City"
+           android:fontFamily="@font/candara"
+           />
+
+       <ImageView
+           android:layout_width="34dp"
+           android:layout_height="34dp"
+           android:background="@drawable/location"
+           android:layout_marginTop="8dp"
+           android:layout_below="@id/img3"
+           android:layout_marginLeft="10dp"
+           android:id="@+id/img4"
+           />
+
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/choosetrip"
+        android:id="@+id/choosedate"
+        android:background="@color/milk"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            android:text="Choose date"
+            android:layout_marginTop="2dp"
+            android:id="@+id/head2"
+            android:fontFamily="@font/montserrat_light"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:textSize="20sp"
+            android:hint="departure date"
+            android:id="@+id/departuretime"
+            android:layout_below="@id/head2"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway_light"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:textSize="20sp"
+            android:hint="return date"
+            android:id="@+id/returntime"
+            android:layout_below="@id/img1"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/raleway_light"
+            />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/calendar"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/head2"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/img1"
+            />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/calendar"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/img1"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/img2"
+
+            />
+    </RelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/choosedate"
+        android:text="Continue"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:background="@color/blueGray"
+        android:textSize="17dp"
+        android:id="@+id/contBtn"
+        android:fontFamily="@font/raleway_light"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contBtn"
+        android:id="@+id/ona"
+        />
+
+    <com.sdsmdg.harjot.longshadows.LongShadowsWrapper
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#40476D"
+        android:layout_below="@id/contBtn"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <com.sdsmdg.harjot.longshadows.LongShadowsTextView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="Hello"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            app:shadow_angle="90"
+            app:shadow_length="130"
+            android:paddingLeft="38dp"
+            android:rotation="-20"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/contBtn"
+            />
+
+    </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
+</RelativeLayout>

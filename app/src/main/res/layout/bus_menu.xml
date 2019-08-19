@@ -1,0 +1,128 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="16dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="5dp"
+    android:paddingTop="4dp"
+    android:clipToPadding="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="5dp"
+        android:elevation="12dp"
+        card_view:cardMaxElevation="10dp"
+        card_view:cardCornerRadius="8dp"
+        >
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/f1"
+            android:background="#FAFAFA">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="0dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/buss"
+                android:background="@drawable/frame"
+                android:id="@+id/pic"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shabiby"
+                android:layout_toRightOf="@id/pic"
+                android:layout_marginTop="8dp"
+                android:textSize="17sp"
+                android:textColor="@color/grey2"
+                android:layout_marginLeft="5dp"
+                android:textAllCaps="true"
+                android:fontFamily="@font/candara"
+                android:id="@+id/name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium Class"
+                android:layout_toEndOf="@id/pic"
+                android:layout_marginLeft="0dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="28dp"
+                android:textSize="15sp"
+                android:background="@drawable/frame2"
+                android:fontFamily="@font/opensans_regular"
+                android:id="@+id/bus_class"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:00 "
+                android:textSize="18sp"
+                android:textColor="@color/grey2"
+
+                android:layout_toRightOf="@id/pic"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="49dp"
+                android:id="@+id/price"/>
+
+            <TextView
+                android:id="@+id/numOfSeats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 30"
+                android:textSize="17sp"
+                android:layout_toStartOf="@id/buyButton"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="27dp"
+                android:textColor="@color/grey2"
+                android:fontFamily="@font/candara"
+                />
+
+            <TextView
+                android:clickable="true"
+                android:id="@+id/buyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="free seats"
+                android:textSize="17sp"
+                android:layout_marginTop="28dp"
+                android:textColor="@color/grey2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/candara"
+
+                />
+
+            <TextView
+                android:clickable="true"
+                android:id="@+id/busfare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20,000"
+                android:textSize="19sp"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/grey2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:layout_below="@id/name"
+                android:fontFamily="@font/candara"
+
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>
