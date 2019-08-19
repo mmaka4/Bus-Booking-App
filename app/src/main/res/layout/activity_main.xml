@@ -182,7 +182,7 @@
         android:layout_centerHorizontal="true"
         >
 
-        <com.sdsmdg.harjot.longshadows.LongShadowsTextView
+        <!--com.sdsmdg.harjot.longshadows.LongShadowsTextView
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:text="Hello"
@@ -195,7 +195,7 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/contBtn"
-            />
+            /-->
 
     </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
 </RelativeLayout>

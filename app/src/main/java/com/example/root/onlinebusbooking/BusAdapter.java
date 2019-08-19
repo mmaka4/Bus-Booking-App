@@ -30,7 +30,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 
 /**
- * Created by User on 3/28/2017.
+ * Created by User on 7/24/2019.
  */
 
 public class BusAdapter extends RecyclerView.Adapter<BusAdapter.ProductViewHolder> {
