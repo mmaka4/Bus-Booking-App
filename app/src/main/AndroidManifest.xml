@@ -22,6 +22,8 @@
         </activity>
     <activity android:name=".Buses" >
     </activity>
+        <activity android:name=".Departure">
+        </activity>
     </application>
 
 </manifest>

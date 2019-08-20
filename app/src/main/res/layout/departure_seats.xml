@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:background="@color/milk"
+        android:id="@+id/head"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dar es salaam - Dodoma"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:id="@+id/root"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18/08/2019"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:id="@+id/date"
+            android:layout_below="@id/root"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shabiby"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:layout_below="@id/date"
+            />
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@id/head"
+        android:layout_marginTop="14dp"
+        android:background="@color/milk"
+        android:gravity="center"
+
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Available"
+            android:textColor="#FA71CD"
+            android:background="@drawable/custom_button3"
+            android:layout_centerInParent="false"
+            android:id="@+id/available"
+            app:layout_constraintWidth_percent="0.31"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Selected"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"
+            android:layout_centerInParent="false"
+            android:id="@+id/selected"
+            android:layout_toRightOf="@id/booked"
+            app:layout_constraintWidth_percent="0.31"
+            app:layout_constraintStart_toEndOf="@id/available"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Booked"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button2"
+            android:layout_centerInParent="false"
+            android:id="@+id/booked"
+            android:layout_toRightOf="@id/available"
+            app:layout_constraintWidth_percent="0.31"
+            app:layout_constraintStart_toEndOf="@id/selected"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

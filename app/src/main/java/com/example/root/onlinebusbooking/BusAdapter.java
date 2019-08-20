@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,6 +56,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.ProductViewHolde
         TextView seats;
         TextView busClass;
         ImageView image;
+        RelativeLayout parentLayout;
         //private CardView card;
 
 
@@ -65,6 +67,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.ProductViewHolde
             seats = itemView.findViewById(R.id.numOfSeats);
             image = itemView.findViewById(R.id.pic);
             busClass = itemView.findViewById(R.id.bus_class);
+            parentLayout = itemView.findViewById(R.id.f1);
         }
     }
 
@@ -81,6 +84,14 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.ProductViewHolde
         holder.seats.setText(String.valueOf(items.get(position).getNumOfSeats()));
         holder.busPrice.setText( String.valueOf(items.get(position).getBPrice()));
         holder.busClass.setText( String.valueOf(items.get(position).getBClass()));
+
+        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, Departure.class);
+                context.startActivity(intent);
+            }
+        });
         //Glide.with(context).load("http://192.168.43.233/android/img/"+items.get(position).getImage()).into(holder.image);
         //Log.d(TAG, "onBindViewHolder: "+ items.get(position).getBPrice());
 
