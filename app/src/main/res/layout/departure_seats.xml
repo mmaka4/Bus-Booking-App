@@ -48,13 +48,13 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         android:layout_below="@id/head"
         android:layout_marginTop="14dp"
         android:background="@color/milk"
         android:gravity="center"
-
+        android:id="@+id/status"
         >
 
         <Button
@@ -65,9 +65,9 @@
             android:background="@drawable/custom_button3"
             android:layout_centerInParent="false"
             android:id="@+id/available"
-            app:layout_constraintWidth_percent="0.31"
+            app:layout_constraintWidth_percent="0.33"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="1.5dp"
             />
 
         <Button
@@ -79,7 +79,7 @@
             android:layout_centerInParent="false"
             android:id="@+id/selected"
             android:layout_toRightOf="@id/booked"
-            app:layout_constraintWidth_percent="0.31"
+            app:layout_constraintWidth_percent="0.33"
             app:layout_constraintStart_toEndOf="@id/available"
             />
 
@@ -92,11 +92,51 @@
             android:layout_centerInParent="false"
             android:id="@+id/booked"
             android:layout_toRightOf="@id/available"
-            app:layout_constraintWidth_percent="0.31"
+            app:layout_constraintWidth_percent="0.33"
             app:layout_constraintStart_toEndOf="@id/selected"
             />
-
+        
+        <android.support.constraint.Barrier
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/labelBarrier"
+            app:barrierDirection="bottom"
+            android:background="@color/black"
+            app:constraint_referenced_ids="available"
+            />
 
     </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/status"
+        android:background="@color/milk"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        >
+
+        <!--ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/steering"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:layout_marginEnd="40dp"
+            /-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:id="@+id/layoutSeat"
+            >
+
+        </ScrollView>
+
+    </LinearLayout>
 
 </RelativeLayout>
