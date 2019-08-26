@@ -72,7 +72,7 @@ public class Departure extends AppCompatActivity implements  View.OnClickListene
                 view.setPadding(0, 0, 0, 2 * seatGaping);
                 view.setId(count);
                 view.setGravity(Gravity.CENTER);
-                view.setBackgroundResource(R.drawable.bus_seat3);
+                view.setBackgroundResource(R.drawable.seat_booked2);
                 view.setTextColor(Color.WHITE);
                 view.setTag(STATUS_BOOKED);
                 view.setText(count + "");
@@ -89,7 +89,7 @@ public class Departure extends AppCompatActivity implements  View.OnClickListene
                 view.setPadding(0, 0, 0, 2 * seatGaping);
                 view.setId(count);
                 view.setGravity(Gravity.CENTER);
-                view.setBackgroundResource(R.drawable.bus_seat3);
+                view.setBackgroundResource(R.drawable.seat_empty2);
                 view.setText(count + "");
                 view.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 9);
                 view.setTextColor(Color.BLACK);
@@ -106,7 +106,7 @@ public class Departure extends AppCompatActivity implements  View.OnClickListene
                 view.setPadding(0, 0, 0, 2 * seatGaping);
                 view.setId(count);
                 view.setGravity(Gravity.CENTER);
-                view.setBackgroundResource(R.drawable.bus_seat3);
+                view.setBackgroundResource(R.drawable.seat_booked2);
                 view.setText(count + "");
                 view.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 9);
                 view.setTextColor(Color.WHITE);
@@ -137,20 +137,20 @@ public class Departure extends AppCompatActivity implements  View.OnClickListene
 
                 if(seats.charAt(index+1) == 'U') {
                     //Log.d("Collidor", " "+ index);
-                    view.setBackgroundResource(R.drawable.bus_seat3);
+                    view.setBackgroundResource(R.drawable.seat_booked2);
                     view.setTextColor(Color.WHITE);
                     view.setTag(STATUS_BOOKED);
                     view.setText(count + "");
 
                 } else if (seats.charAt(index+1) == 'R') {
-                    view.setBackgroundResource(R.drawable.bus_seat3);
+                    view.setBackgroundResource(R.drawable.seat_booked2);
                     view.setText(count + "");
                     view.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 9);
                     view.setTextColor(Color.WHITE);
                     view.setTag(STATUS_RESERVED);
 
                 } else if (seats.charAt(index+1) == 'A') {
-                    view.setBackgroundResource(R.drawable.bus_seat3);
+                    view.setBackgroundResource(R.drawable.seat_empty2);
                     view.setText(count + "");
                     view.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 9);
                     view.setTextColor(Color.BLACK);
@@ -171,10 +171,10 @@ public class Departure extends AppCompatActivity implements  View.OnClickListene
         if ((int) view.getTag() == STATUS_AVAILABLE) {
             if (selectedIds.contains(view.getId() + ",")) {
                 selectedIds = selectedIds.replace(+view.getId() + ",", "");
-                view.setBackgroundResource(R.drawable.bus_seat3);
+                view.setBackgroundResource(R.drawable.seat_empty2);
             } else {
                 selectedIds = selectedIds + view.getId() + ",";
-                view.setBackgroundResource(R.drawable.bus_seat3);
+                view.setBackgroundResource(R.drawable.seat_selected2);
             }
         } else if ((int) view.getTag() == STATUS_BOOKED) {
             Toast.makeText(this, "Seat " + view.getId() + " is Booked", Toast.LENGTH_SHORT).show();

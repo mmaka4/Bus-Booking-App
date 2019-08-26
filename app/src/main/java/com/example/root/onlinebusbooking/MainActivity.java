@@ -6,9 +6,15 @@ import android.app.DatePickerDialog;
 import android.content.ClipData;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationMenu;
+import android.support.design.internal.BottomNavigationMenuView;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -51,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String jsonResponse;
     int dStatus=0,rStatus=0;
     Button contBtn;
+    ActionBar toolbar;
 
     private static String url = "http://192.168.43.233/onlineBusbooking/regions.php";
     private static String TAG = "MainActivity";
@@ -71,10 +78,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         buses = new ArrayList<>();
 
+        toolbar = getSupportActionBar();
+
+        BottomNavigationView navigation = findViewById(R.id.navigationView);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        toolbar.setTitle("Trip");
+
+        //actionBar = findViewById(R.id.navigationView);
+
+
+
         loadSpinnerData();
         dTime = findViewById(R.id.departuretime);
         rTime = findViewById(R.id.returntime);
-        ona = findViewById(R.id.ona);
+        //ona = findViewById(R.id.ona);
         dView = findViewById(R.id.img1);
         dView.setOnClickListener(this);
         rView = findViewById(R.id.img2);
@@ -164,6 +182,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+
+    BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            return false;
+        }
+    };
 
     @Override
     public void onClick(View view) {

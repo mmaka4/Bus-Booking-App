@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,21 +10,23 @@
 
    <RelativeLayout
        android:layout_width="match_parent"
-       android:layout_height="140dp"
-       android:layout_marginTop="10dp"
-
-       android:layout_marginLeft="10dp"
-       android:layout_marginRight="10dp"
+       android:layout_height="0dp"
+       app:layout_constraintHeight_percent="0.29"
+       android:layout_marginTop="15dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       android:layout_margin="18dp"
        android:background="@color/milk"
        android:id="@+id/choosetrip"
        >
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:layout_marginLeft="5dp"
+           android:layout_marginLeft="14dp"
            android:textSize="20sp"
            android:text="Choose trip"
-           android:layout_marginTop="2dp"
+           android:layout_marginTop="10dp"
            android:id="@+id/head1"
            android:fontFamily="@font/montserrat_light"
            />
@@ -33,9 +35,9 @@
            android:layout_width="34dp"
            android:layout_height="34dp"
            android:background="@drawable/location"
-           android:layout_marginTop="8dp"
+           android:layout_marginTop="11dp"
            android:layout_below="@id/head1"
-           android:layout_marginLeft="10dp"
+           android:layout_marginLeft="14dp"
            android:id="@+id/img3"
            />
 
@@ -55,10 +57,10 @@
            android:id="@+id/fromspin"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:layout_marginTop="0dp"
+           android:layout_marginTop="3dp"
            android:layout_below="@id/head1"
            android:layout_toEndOf="@id/img3"
-           android:layout_marginLeft="8dp"
+           android:layout_marginLeft="14dp"
            app:spinnerDirection="ltr"
            app:spinnerHint="from City"
            />
@@ -66,9 +68,10 @@
        <com.isapanah.awesomespinner.AwesomeSpinner
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:layout_marginLeft="8dp"
+           android:layout_marginLeft="14dp"
            android:layout_toEndOf="@id/img4"
            android:layout_marginTop="0dp"
+           android:layout_marginBottom="8dp"
            android:layout_below="@id/fromspin"
            android:id="@+id/tospin"
            app:spinnerHint="to City"
@@ -79,9 +82,9 @@
            android:layout_width="34dp"
            android:layout_height="34dp"
            android:background="@drawable/location"
-           android:layout_marginTop="8dp"
+           android:layout_marginTop="22dp"
            android:layout_below="@id/img3"
-           android:layout_marginLeft="10dp"
+           android:layout_marginLeft="14dp"
            android:id="@+id/img4"
            />
 
@@ -89,8 +92,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_margin="10dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.29"
+        android:layout_margin="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choosetrip"
         android:layout_below="@id/choosetrip"
         android:id="@+id/choosedate"
         android:background="@color/milk"
@@ -99,10 +106,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="10dp"
             android:textSize="20sp"
             android:text="Choose date"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/head2"
             android:fontFamily="@font/montserrat_light"
             />
@@ -110,19 +117,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
+            android:layout_marginStart="50dp"
             android:textSize="20sp"
             android:hint="departure date"
             android:id="@+id/departuretime"
             android:layout_below="@id/head2"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="13dp"
             android:fontFamily="@font/raleway_light"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
+            android:layout_marginStart="50dp"
             android:textSize="20sp"
             android:hint="return date"
             android:id="@+id/returntime"
@@ -135,7 +142,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:background="@drawable/calendar"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="11dp"
             android:layout_below="@id/head2"
             android:layout_marginLeft="10dp"
             android:id="@+id/img1"
@@ -146,6 +153,7 @@
             android:layout_height="32dp"
             android:background="@drawable/calendar"
             android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
             android:layout_below="@id/img1"
             android:layout_marginLeft="10dp"
             android:id="@+id/img2"
@@ -157,8 +165,10 @@
         android:layout_height="50dp"
         android:layout_below="@id/choosedate"
         android:text="Continue"
-        android:layout_marginLeft="9dp"
-        android:layout_marginRight="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choosedate"
+        android:layout_margin="18dp"
         android:background="@color/blueGray"
         android:textSize="17dp"
         android:id="@+id/contBtn"
@@ -166,6 +176,14 @@
         />
 
     <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_gravity="center"
+        tools:ignore="MissingConstraints" />
+
+    <!--TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/contBtn"
@@ -180,7 +198,7 @@
         android:layout_below="@id/contBtn"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        >
+        -->
 
         <!--com.sdsmdg.harjot.longshadows.LongShadowsTextView
             android:layout_width="200dp"
@@ -195,7 +213,23 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/contBtn"
-            /-->
+            />
 
-    </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
-</RelativeLayout>
+    </com.sdsmdg.harjot.longshadows.LongShadowsWrapper-->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/navigation"/>
+
+</android.support.constraint.ConstraintLayout>
